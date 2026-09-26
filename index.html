@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Angkor的笔记本</title>
+<title>Angkor web</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,sans-serif}
 html,body{height:100%}
@@ -37,6 +37,9 @@ footer{width:100%;border-top:2px solid #e5e7eb;padding:5px;background-color: #ff
 .footer-inner{max-width:820px;margin:0 auto;padding:0 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:space-between}
 .footer-icon{width:18px;height:18px;vertical-align:middle;opacity:0.75;transition:0.2s;cursor:pointer}
 .footer-icon:hover{opacity:1}
+@media (prefers-color-scheme: dark){
+    .footer-icon{filter:invert(1)}
+}
 .toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%);background:#222;color:#fff;padding:8px 16px;border-radius:6px;font-size:14px;z-index:200;opacity:0;pointer-events:none;transition:.2s}
 .toast.show{opacity:0.9}
 </style>
@@ -45,7 +48,7 @@ footer{width:100%;border-top:2px solid #e5e7eb;padding:5px;background-color: #ff
 <header class="header-fixed">
 <div class="container" style="padding:0;display:flex;align-items:center">
 <img class="avatar" src="https://img.remit.ee/i/6uew0jOf0zPS" alt="avatar">
-<div class="site-title">Angkor</div>
+<div class="site-title">Angkor's web</div>
 </div>
 </header>
 <div class="back-btn" id="backBtn" title="返回列表">×</div>
@@ -70,12 +73,11 @@ footer{width:100%;border-top:2px solid #e5e7eb;padding:5px;background-color: #ff
 <a href="https://space.bilibili.com/3546862837565494?spm_id_from=333.1007.0.0" target="_blank"><img title="进入作者BiliBili主页" class="footer-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/bilibili.svg" alt="Bilibili"></a>
 </div>
 <div>
-<span><strong>© 2026 Angkor</strong></span>
+<span><strong>Github Pages</strong></span>
 </div>
 </div>
 </footer>
 <div class="toast" id="toast"></div>
-
 <script src="./articles.js"></script>
 <script>
 const listView=document.getElementById('listView');
@@ -87,7 +89,6 @@ const detailContent=document.getElementById('detailContent');
 const copyMailIcon=document.getElementById('copyMailIcon');
 const toast=document.getElementById('toast');
 const MAIL="1220718305@qq.com";
-
 //复制邮箱
 copyMailIcon.addEventListener('click',async ()=>{
   try{
@@ -104,13 +105,11 @@ copyMailIcon.addEventListener('click',async ()=>{
     showToast("已复制邮箱");
   }
 })
-
 function showToast(text){
   toast.innerText=text;
   toast.classList.add('show');
   setTimeout(()=>toast.classList.remove('show'),1800);
 }
-
 function renderList(){
 listView.innerHTML='';
 articles.forEach((item,idx)=>{
