@@ -10,6 +10,19 @@
 // 文章主题：【文章主题】
 const articles = [
 {
+title:"置顶：这是一个演示页面",
+date:"2026-09-20",
+desc:"网站仅用于演示，如有侵权请联系删除",
+content:`
+<h2 style="color:red">内容仅用于演示</h2>
+<h2 style="color:red">内容仅用于演示</h2>
+<h2 style="color:red">内容仅用于演示</h2>
+<h2>请遵守法律法规，网站仅用于演示，如有侵权请联系删除！</h2>
+<h2>未经许可，私自搬运可能违反法律 © 2026 Angkor</h2>
+`
+}
+,
+{
 title:"Github",
 date:"2026-09-25",
 desc:"开启世界的方式",
