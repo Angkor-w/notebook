@@ -10,249 +10,187 @@
 // 文章主题：【文章主题】
 const articles = [
 {
-title:"置顶：这是一个演示页面",
-date:"2026-09-20",
-desc:"网站仅用于演示，如有侵权请联系删除",
+title:"友情链接",
+date:"2026-09-30 上传",
+desc:"常用网站链接",
 content:`
-<h2 style="color:red">内容仅用于演示</h2>
-<h2 style="color:red">内容仅用于演示</h2>
-<h2 style="color:red">内容仅用于演示</h2>
-<h2>请遵守法律法规，网站仅用于演示，如有侵权请联系删除！</h2>
-<h2>未经许可，私自搬运可能违反法律 © 2026 Angkor</h2>
+<h2>友情链接说明</h3>
+
+<p>以上链接均为各平台<strong>官方主站</strong>，推荐优先通过官方渠道访问，以确保账号安全与内容正版。</p>
+
+<ul>
+  <li><strong>视频与社交</strong>：哔哩哔哩、抖音提供视频内容消费与创作服务；</li>
+  <li><strong>阅读与学习</strong>：番茄小说为免费网文阅读平台，多邻国提供语言学习课程；</li>
+  <li><strong>开发工具</strong>：Python 为编程语言官网，Visual Studio Code 为代码编辑器官网；</li>
+  <li><strong>搜索引擎与综合服务</strong>：谷歌、微软、腾讯网分别为搜索、软件生态与新闻门户的入口。</li>
+</ul>
+
+<blockquote>
+  <p>建议将这些链接添加至浏览器书签，方便日常快速访问。若发现链接失效或跳转异常，请以平台 App 或官方公告为准。</p>
+</blockquote>
+
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+  <img src="https://www.bilibili.com/favicon.ico" alt="哔哩哔哩图标" style="width:48px;height:48px;border-radius:8px;">
+  <div>
+    <p style="margin:0 0 6px 0;font-size:16px;font-weight:600;">哔哩哔哩</p>
+    <p style="margin:0;font-size:14px;color:#666;">国内知名的视频弹幕网站，涵盖动画、番剧、游戏、知识、生活等多元内容分区，年轻用户聚集的文化社区。</p>
+  </div>
+</div>
+<p style="margin:0 0 24px 64px;"><a href="https://www.bilibili.com/" target="_blank">www.bilibili.com</a></p>
+
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+  <img src="https://www.douyin.com/favicon.ico" alt="抖音图标" style="width:48px;height:48px;border-radius:8px;">
+  <div>
+    <p style="margin:0 0 6px 0;font-size:16px;font-weight:600;">抖音</p>
+    <p style="margin:0;font-size:14px;color:#666;">短视频记录与分享平台，用户可通过短视频记录生活点滴，涵盖娱乐、知识、电商、直播等多种场景。</p>
+  </div>
+</div>
+<p style="margin:0 0 24px 64px;"><a href="https://www.douyin.com/" target="_blank">www.douyin.com</a></p>
+
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+  <img src="https://ts4.tc.mm.bing.net/th/id/OIP-C.y3I7LNs1Yy0rBSjNJHQo3AHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="多邻国图标" style="width:48px;height:48px;border-radius:8px;">
+  <div>
+    <p style="margin:0 0 6px 0;font-size:16px;font-weight:600;">多邻国</p>
+    <p style="margin:0;font-size:14px;color:#666;">全球流行的语言学习平台，以游戏化方式提供英语、日语、法语、西班牙语等多语种课程，免费且科学有效。</p>
+  </div>
+</div>
+<p style="margin:0 0 24px 64px;"><a href="https://www.duolingo.com/" target="_blank">www.duolingo.com</a></p>
+
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+  <img src="https://ts4.tc.mm.bing.net/th/id/OIP-C.-ecn234u43SLC-vPZu_ofgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="番茄小说图标" style="width:48px;height:48px;border-radius:8px;">
+  <div>
+    <p style="margin:0 0 6px 0;font-size:16px;font-weight:600;">番茄小说</p>
+    <p style="margin:0;font-size:14px;color:#666;">字节跳动旗下的免费网文阅读平台，提供海量正版小说资源，涵盖都市高武、悬疑脑洞、豪门总裁、玄幻仙侠等热门分类。</p>
+  </div>
+</div>
+<p style="margin:0 0 24px 64px;"><a href="https://fanqienovel.com/" target="_blank">fanqienovel.com</a></p>
+
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+  <img src="https://www.python.org/static/favicon.ico" alt="Python图标" style="width:48px;height:48px;border-radius:8px;">
+  <div>
+    <p style="margin:0 0 6px 0;font-size:16px;font-weight:600;">Python</p>
+    <p style="margin:0;font-size:14px;color:#666;">一种易学易用的通用编程语言，广泛应用于数据科学、人工智能、Web开发、自动化脚本等领域，拥有庞大活跃的社区生态。</p>
+  </div>
+</div>
+<p style="margin:0 0 24px 64px;"><a href="https://www.python.org/" target="_blank">www.python.org</a></p>
+
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+  <img src="https://code.visualstudio.com/favicon.ico" alt="Visual Studio Code图标" style="width:48px;height:48px;border-radius:8px;">
+  <div>
+    <p style="margin:0 0 6px 0;font-size:16px;font-weight:600;">Visual Studio Code</p>
+    <p style="margin:0;font-size:14px;color:#666;">微软出品的免费开源代码编辑器，轻量但功能强大，支持 Windows、macOS 和 Linux 平台，通过丰富插件可适配几乎所有主流编程语言。</p>
+  </div>
+</div>
+<p style="margin:0 0 24px 64px;"><a href="https://code.visualstudio.com/" target="_blank">code.visualstudio.com</a></p>
+
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+  <img src="https://ts1.tc.mm.bing.net/th/id/OIP-C.8ejT325Sn_NQakb9Hv2G5QHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="谷歌图标" style="width:48px;height:48px;border-radius:8px;">
+  <div>
+    <p style="margin:0 0 6px 0;font-size:16px;font-weight:600;">谷歌</p>
+    <p style="margin:0;font-size:14px;color:#666;">全球最大的搜索引擎公司，提供搜索、地图、邮箱、云盘、翻译、办公套件等互联网服务，同时也是 Android 系统和 Chrome 浏览器的开发者。</p>
+  </div>
+</div>
+<p style="margin:0 0 24px 64px;"><a href="https://www.google.com/" target="_blank">www.google.com</a></p>
+
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+  <img src="https://www.microsoft.com/favicon.ico" alt="微软图标" style="width:48px;height:48px;border-radius:8px;">
+  <div>
+    <p style="margin:0 0 6px 0;font-size:16px;font-weight:600;">微软</p>
+    <p style="margin:0;font-size:14px;color:#666;">全球领先的科技公司，旗下拥有 Windows 操作系统、Office 办公套件、Azure 云服务、Surface 硬件以及 GitHub 等核心产品与服务。</p>
+  </div>
+</div>
+<p style="margin:0 0 24px 64px;"><a href="https://www.microsoft.com/" target="_blank">www.microsoft.com</a></p>
+
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+  <img src="https://mat1.gtimg.com/qqcdn/qqindex2021/favicon.ico" alt="腾讯网图标" style="width:48px;height:48px;border-radius:8px;">
+  <div>
+    <p style="margin:0 0 6px 0;font-size:16px;font-weight:600;">腾讯网</p>
+    <p style="margin:0;font-size:14px;color:#666;">腾讯公司旗下的综合门户网站，集新闻信息、互动社区、娱乐产品于一体，为全球华人用户提供实时新闻和深度资讯服务。</p>
+  </div>
+</div>
+<p style="margin:0 0 24px 64px;"><a href="https://www.qq.com/" target="_blank">www.qq.com</a></p>
 `
 }
 ,
 {
-title:"Github",
-date:"2026-09-25",
-desc:"开启世界的方式",
+title:"操作技巧",
+date:"2026-09-30",
+desc:"常用网站链接",
 content:`
-<h2>GitHub 是什么</h2>
-<p>GitHub 是全球最流行的代码托管与协作平台之一，基于 Git 版本控制系统构建。开发者可以在上面创建仓库，管理代码历史，追踪问题，合并分支，并与来自世界各地的人一起完成项目。它不仅是存放代码的地方，也逐渐成为开源文化、技术学习和团队协作的重要基础设施。</p>
-<h2>核心功能</h2>
-<p>GitHub 的功能围绕仓库展开，常见能力包括：</p>
+<h2>实用操作技巧</h2>
+<h3>1.浏览器批量添加书签</h3>
+<p>如果你希望把上面全部链接一次性导入浏览器书签，可以使用书签导入导出功能。</p>
 <ul>
-  <li><strong>代码托管</strong>：支持公开和私有仓库，方便备份与分享。</li>
-  <li><strong>版本控制</strong>：通过 Git 记录每次修改，随时回退和对比。</li>
-  <li><strong>Issue 跟踪</strong>：用问题列表管理需求、缺陷和讨论。</li>
-  <li><strong>Pull Request</strong>：以合并请求的方式审查代码，保证质量。</li>
-  <li><strong>Actions</strong>：自动化测试、构建和部署流程。</li>
-  <li><strong>Pages</strong>：免费发布静态网站，适合文档和博客。</li>
+<li>Chrome / Edge：右上角三点 → 书签和清单 → 书签管理器 → 右上角三个点 → <strong>导入书签</strong></li>
+<li>Firefox：书签管理 → 从HTML文件导入</li>
 </ul>
-<h3>为什么开发者喜欢它</h3>
-<p>GitHub 的社交属性让代码不再孤立。你可以关注感兴趣的项目，给仓库点星，参与讨论，甚至通过 <em>fork</em> 和 <em>pull request</em> 直接贡献代码。对于初学者来说，阅读优秀项目的源码和提交记录，是提升工程能力的有效途径。</p>
 <blockquote>
-  <p>开源不是一种许可证，而是一种协作方式。GitHub 让这种方式变得触手可及。</p>
+<p>小提示：导出的书签为HTML格式，可以备份保存到本地，重装浏览器直接恢复全部收藏网站。</p>
 </blockquote>
-<h3>典型使用场景</h3>
+
+<h3>2.快速打开链接：浏览器关键词别名</h3>
+<p>Chrome/Edge支持给网站设置自定义关键字，地址栏输入简短字符即可直接跳转。</p>
 <ol>
-  <li>个人项目管理：用仓库记录学习笔记、练手项目和配置。</li>
-  <li>团队协作：通过分支、PR 和代码审查完成多人开发。</li>
-  <li>开源贡献：给喜欢的项目提 issue，修复 bug，完善文档。</li>
-  <li>持续集成：配置 <code>workflow</code> 文件，自动运行测试和部署。</li>
+<li>打开设置 → 搜索引擎 → 管理搜索引擎和站点搜索</li>
+<li>找到对应网站，点击编辑，填写“关键字”，例如给B站设置关键字 <code>b</code></li>
+<li>之后地址栏输入 <code>b</code> 按下回车，直接打开哔哩哔哩主页</li>
 </ol>
-<h2>快速上手建议</h2>
-<p>想开始使用 GitHub，可以先注册账号，创建一个新仓库，然后安装 Git 并配置用户名和邮箱。常用命令如 <code>git clone</code>、<code>git add</code>、<code>git commit</code>、<code>git push</code> 值得优先掌握。遇到问题时，可以查阅 <a href="https://docs.github.com" target="_blank">GitHub 官方文档</a>，也可以浏览 <a href="https://github.com/explore" target="_blank">Explore 页面</a> 发现优质项目。</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X2pwZy9VaWMwUzFyNW82T3QzMTF5bmtobWJhSWhxYVdWNGM3b2ljbVh0aWNpY0c0T3E5aWNTQWZta3JBZGo2UEg4TzI3d0dMb2lhUnJJSDBLOExFV1NiVXo3TUxDZmN4dy82NDA?x-oss-process=image/format,png" alt="GitHub 代码协作与开源项目示意图"></p>
-<p>总的来说，GitHub 既是工具，也是社区。它让代码管理更规范，让协作更透明，也让学习技术变得更有参与感。无论你是学生、独立开发者还是团队成员，善用 GitHub 都会显著提升你的开发效率与影响力。</p>
-`
-}
-,
-{
-title:"习近平访美达成重要协议!",
-date:"2026-09-25",
-desc:"2026年9月习近平应邀对美国进行国事访问，中美达成八点成果共识",
-content:`
-<h2>访问背景与战略定位</h2>
-<p>当地时间2026年9月23日至25日，中国国家主席习近平应邀对美国进行国事访问。这是中美两国元首在短短4个多月内实现的历史性互访，在中美关系史上是前所未有的安排，具有<strong>里程碑意义</strong>。</p>
 
-<p>此次访问的核心成果，是双方进一步明确了中美<strong>建设性战略稳定关系</strong>的新定位。两国元首同意共同构建<strong>基于尊重、公平、对等的中美建设性战略稳定关系</strong>，朝着合作为主、竞争有度、分歧可控、和平可期的方向努力。</p>
-
-<img src="https://picsum.photos/seed/xi-meeting/800/450" alt="中美两国元首会谈场景示意图">
-
-<h2>八点成果共识</h2>
-<p>根据中国驻美大使馆发布的消息，两国元首在会晤中达成了八点成果共识，涵盖战略定位、经贸合作、执法协作、人工智能等多个领域。</p>
-
-<h3>战略与外交层面</h3>
-<p>双方确认构建建设性战略稳定关系，并相互支持对方办好亚太经合组织（APEC）领导人非正式会议和二十国集团（G20）领导人峰会。两国元首有意出席对方主办的会议。</p>
-
-<h3>经贸合作取得实质突破</h3>
-<p>在经贸领域，双方认可中美经贸磋商机制的积极作用，并达成了一项具体的降税安排：<strong>300亿美元对等降税</strong>。双方还将建立并推进贸易理事会等机制，延期此前吉隆坡经贸磋商的成果。</p>
-
-<h3>执法与安全合作</h3>
+<h2>链接安全校验小知识</h2>
 <ul>
-<li><strong>禁毒合作：</strong>中美禁毒执法部门联合破获多起涉新精神活性物质及前体化学品案件，在两国抓获数十名犯罪嫌疑人，合作取得可视化成果。</li>
-<li><strong>两军沟通：</strong>中美两军同意尽快签署加强危机沟通与预防的谅解备忘录，继续合作搜寻在华美军失踪人员遗骸。</li>
+<li><strong>认准域名</strong>：访问前检查浏览器地址栏域名，钓鱼网站经常使用近似混淆域名。</li>
+<li><strong>HTTPS锁图标</strong>：地址栏出现小锁代表加密连接；没有锁尽量不要输入账号密码。</li>
+<li><strong>不要点开聊天收到的短链接</strong>，不确定的链接可以使用在线网址解析工具展开真实地址。</li>
 </ul>
 
-<h3>人工智能与人文交流</h3>
+<h2>推荐网络工具站点（补充友情链接）</h2>
+
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+  <img src="https://pic.mksucai.com/00/20/53/7505c45ec7640e8a.webp" alt="Can I Use图标" style="width:48px;height:48px;border-radius:8px;">
+  <div>
+    <p style="margin:0 0 6px 0;font-size:16px;font-weight:600;">Can I Use</p>
+    <p style="margin:0;font-size:14px;color:#666;">前端开发必备，查询CSS、JS特性在各个浏览器的兼容情况。写网页时用来判断API是否可以直接使用。</p>
+  </div>
+</div>
+<p style="margin:0 0 24px 64px;"><a href="https://caniuse.com/" target="_blank">caniuse.com</a></p>
+
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+  <img src="https://ts4.tc.mm.bing.net/th/id/OIP-C.nHjXHoFuxF2afs4lObgJ2wAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Regex101图标" style="width:48px;height:48px;border-radius:8px;">
+  <div>
+    <p style="margin:0 0 6px 0;font-size:16px;font-weight:600;">Regex101</p>
+    <p style="margin:0;font-size:14px;color:#666;">正则表达式在线调试工具。可以编写、测试正则，附带解释、匹配示例，写脚本处理文本非常实用。</p>
+  </div>
+</div>
+<p style="margin:0 0 24px 64px;"><a href="https://regex101.com/" target="_blank">regex101.com</a></p>
+
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+  <img src="https://pic.pngsucai.com/00/65/43/f928f04a8359c04b.webp" alt="JSONLint图标" style="width:48px;height:48px;border-radius:8px;">
+  <div>
+    <p style="margin:0 0 6px 0;font-size:16px;font-weight:600;">JSONLint</p>
+    <p style="margin:0;font-size:14px;color:#666;">JSON在线校验格式化工具。复制粘贴JSON，自动找出语法错误、格式化压缩JSON文本，调试接口数据必备。</p>
+  </div>
+</div>
+<p style="margin:0 0 24px 64px;"><a href="https://jsonlint.com/" target="_blank">jsonlint.com</a></p>
+
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+  <img src="https://convertio.co/favicon.ico" alt="Convertio图标" style="width:48px;height:48px;border-radius:8px;">
+  <div>
+    <p style="margin:0 0 6px 0;font-size:16px;font-weight:600;">Convertio</p>
+    <p style="margin:0;font-size:14px;color:#666;">在线文件格式转换，支持图片、文档、音视频之间互相转换，无需安装本地软件。</p>
+  </div>
+</div>
+<p style="margin:0 0 24px 64px;"><a href="https://convertio.co/" target="_blank">convertio.co</a></p>
+
+<h2>拓展：搭建属于自己的静态书签页（就是你当前这套项目）</h2>
+<p>你现在的资料库本身就可以作为<strong>个人自建书签页</strong>，优势：完全静态托管在Github Pages，不受浏览器同步限制，换电脑打开网页即可看到全部链接。</p>
 <ul>
-<li>双方同意建立<strong>中美人工智能对话</strong>机制，交流人工智能相关风险和惠益，下次对话将于今年11月举行，并建立人工智能事件的沟通渠道。</li>
-<li>美方欢迎中方租借给美国亚特兰大动物园的一对大熊猫抵美。</li>
+<li>新增链接：直接在 <code>articles.js</code> 添加新文章或者在本篇友情链接追加模块。</li>
+<li>可以分类：新建多篇文章分别存放【开发工具】【娱乐网站】【学习资源】。</li>
+<li>全部数据保存在仓库，不怕浏览器书签丢失、同步异常。</li>
 </ul>
-
-<h2>访问的深远意义</h2>
-<p>中国驻美大使谢锋在专访中表示，此次访问在中美关系和国际关系中具有里程碑意义。5月以来，双方沿着元首设定的轨道，在政治外交、两军沟通、经贸磋商、执法合作、人文交流等多个领域取得了初步成效。</p>
-
 <blockquote>
-<p>“中美关系希望在人民、基础在民间、未来在青年、活力在地方。”</p>
+<p>实践小建议：可以给自己的书签页面设置浏览器首页，打开浏览器直接访问你的Github Pages地址。</p>
 </blockquote>
-
-<p>习近平主席在访问中宣布，未来5年中方将邀请<strong>10万名美国青少年</strong>赴华交流学习，大熊猫“平平”“福双”也将落户亚特兰大动物园，同美国人民见面。</p>
-
-<p>谢锋强调，共识从愿景变成实景不会一蹴而就，双方应<em>不以善小而不为、不以恶小而为之</em>，不断拉长合作清单、压缩问题清单，让两国元首重要共识在各层面进一步落地。</p>
-
-<h2>展望</h2>
-<p>从“300亿美元”对等降税安排到人工智能对话机制的建立，从联合缉毒到文物返还，此次访问将中美建设性战略稳定关系的愿景转化为了一系列具体行动。正如习近平主席所指出的，<strong>“实现中华民族伟大复兴和让美国再次伟大并行不悖”</strong>。两国元首半年内实现互访的节奏，也为这段关系注入了罕见的动能。</p>
-
-<p>有关中美关系的更多背景，可参考<a href="https://us.china-embassy.gov.cn/chn/zgyw/202609/t20260926_12031616.htm" target="_blank">中国驻美大使馆发布的八点成果共识全文</a>。</p>
-`
-}
-,
-{
-title:"编程技巧：从可读到可维护的代码实践",
-date:"2026-09-26",
-desc:"掌握编程技巧，写出既能让机器执行、又能让人轻松理解的优雅代码，提升代码可读性与可维护性。",
-content:`
-<h2>编程技巧：从可读到可维护</h2>
-<p>很多程序员写代码时只关注“能跑”，但真正优秀的代码，应该在几个月后自己或同事再看时，依然能<strong>快速理解</strong>。编程技巧的核心，不是炫技，而是<strong>降低认知负担</strong>。</p>
-<img src="https://so1.360tres.com/t01ae9a4c3b1c724dfd.jpg" alt="程序员在屏幕上编写代码的场景">
-<h3>一、命名即文档</h3>
-<p>变量、函数、类的名字，应该直接表达意图。比如 <code>getUserById</code> 比 <code>getData</code> 好得多。好的命名能减少大量注释，因为<em>代码本身就在说话</em>。</p>
-<ul>
-  <li>避免无意义缩写，如 <code>tmp</code>、<code>data1</code></li>
-  <li>布尔值用 <code>is</code>、<code>has</code>、<code>can</code> 开头</li>
-  <li>函数名用动词短语，类名用名词短语</li>
-</ul>
-<h3>二、小函数与单一职责</h3>
-<p>一个函数只做一件事。当函数超过一屏时，就该考虑拆分。小函数更容易测试、复用和调试。记住：<strong>短小即是美</strong>。</p>
-<blockquote>
-  <p>任何傻瓜都能写出计算机能理解的代码，只有优秀的程序员才能写出人能理解的代码。</p>
-</blockquote>
-<p>—— Martin Fowler</p>
-<h3>三、善用注释与文档</h3>
-<p>注释应解释<em>为什么</em>，而不是<em>做什么</em>。代码本身已经说明了“做什么”，注释要补充背景、约束和边界条件。</p>
-<ol>
-  <li>对复杂算法写出思路</li>
-  <li>对公共 API 写清楚参数和返回值</li>
-  <li>对临时方案注明 TODO 和原因</li>
-</ol>
-<h3>四、持续重构</h3>
-<p>重构不是项目末期的一次性工作，而是日常习惯。每次修改代码时，顺手改善一点结构。推荐阅读《重构：改善既有代码的设计》，并结合单元测试保证安全。</p>
-<p>更多编程实践可参考 <a href="https://refactoring.com/" target="_blank">Refactoring 官网</a> 和 <a href="https://developer.mozilla.org/zh-CN/" target="_blank">MDN Web 文档</a>。</p>
-<p>编程技巧千千万，但核心始终是：<strong>写给人看，顺便让机器执行</strong>。坚持这些原则，你的代码会越来越优雅。</p>
-`
-}
-,
-{
-title:"🎉习近平抵达华盛顿对美国进行国事访问",
-date:"2026-09-23",
-desc:"国家主席习近平乘专机抵达华盛顿，应美国总统特朗普邀请对美国进行国事访问",
-content:`
-<h2>习近平抵达华盛顿对美国进行国事访问</h2>
-
-<p>当地时间2026年9月23日下午，国家主席习近平乘专机抵达华盛顿，应美国总统特朗普邀请，对美国进行国事访问。这是中美两国元首在不到半年时间内实现的互访，在中美关系史上具有里程碑意义。</p>
-
-<h3>白宫欢迎仪式</h3>
-
-<p>当地时间9月24日上午，美国总统特朗普在白宫举行隆重仪式，热烈欢迎中国国家主席习近平对美国进行国事访问。习近平和夫人彭丽媛乘车抵达白宫时，特朗普总统和夫人梅拉尼娅在下车处热情迎接，两国元首夫妇合影留念。</p>
-
-<img src="https://www.qstheory.cn/20260924/f7e17ae3c4df40db843c43ff833c8f30/lwTgsOqOYNDp5Bm7.jpeg" alt="白宫外景示意图片，美国国事访问欢迎仪式举办地">
-
-<h3>两国元首会谈</h3>
-
-<p>欢迎仪式结束后，两国元首夫妇移步白宫椭圆形办公室，进行亲切友好的交流。随后，习近平同特朗普在白宫举行正式会谈。</p>
-
-<p>习近平指出，中美两国元首在不到半年时间里实现互访，在中美关系史上是前所未有的。我和特朗普总统一直通过各种方式保持沟通，共同为中美关系这艘大船领航掌舵。</p>
-
-<p>习近平强调，中美两国应当也完全可以在务实合作中互利共赢，在良性竞争中彼此成就，在求同存异中妥处分歧，在累积互信中构筑和平，让中美建设性战略稳定关系更好惠及两国人民和世界各国人民。</p>
-
-<blockquote>
-<p>“合作是双行道，中美经贸关系的稳定既需要拉长合作清单，也需要压缩问题清单。只要秉持平等、尊重、互惠的精神，就能找到解决问题的出路。”</p>
-</blockquote>
-
-<h3>会谈主要议题</h3>
-
-<p>两国元首就广泛议题深入交换意见，主要包括以下方面：</p>
-
-<ul>
-<li><strong>经贸合作</strong>：双方经贸团队举行新一轮磋商，达成了一份新的联合安排，对两国产业界和全球经济都是好消息。</li>
-<li><strong>人工智能</strong>：中美都是人工智能大国，双方可以继续开展对话，共同防范人工智能被滥用恶用，让人工智能为人类进步服务。</li>
-<li><strong>台湾问题</strong>：习近平强调中方维护国家统一和领土完整的立场很清楚，希望美方坚持反对“台独”的正确立场，慎重处理台湾问题。</li>
-<li><strong>国际和地区问题</strong>：两国元首还就中东局势、乌克兰危机、朝鲜半岛等问题交换了意见。</li>
-</ul>
-
-<h3>美方表态</h3>
-
-<p>特朗普表示，习近平主席这次对美国的国事访问是一次伟大的访问。美中都是大国，我同习近平主席是好朋友，保持着深入密切沟通。在我们的领导下，美中关系一定能搞好。</p>
-
-<p>两国元首确认将相互支持办好2026年亚太经合组织领导人非正式会议和二十国集团领导人峰会。蔡奇、王毅、何立峰等参加会谈。</p>
-
-<hr>
-
-<p><em>背景信息</em>：此次访问是习近平主席应特朗普总统邀请对美国进行的国事访问，标志着中美建设性战略稳定关系进入新的发展阶段。</p>
-`
-}
-,
-{
-title:"⚠日本呼吁删除“敌国条款”分析：动机、门槛与中方立场",
-date:"2026-09-22",
-desc:"本文梳理其历史背景、法律门槛、日本推动动机及中俄等国立场，分析“敌国条款”为何仍然具有现实意义",
-content:`
-<h2>事件背景与核心诉求</h2>
-<p>2026年9月22日，日本首相高市早苗在联合国大会首次演讲中公开呼吁“尽快删除”《联合国宪章》中的“敌国条款”，声称该条款“已过时”，并强调这关乎日本的“荣誉和尊严”。这一诉求并非首次提出。自1960年代以来，日本政府持续通过外交渠道推动删除该条款，但始终未能成功。高市早苗此番联大发言，是日本右翼势力在“国家正常化”叙事下的一次集中外交造势。</p>
-
-<img src="https://q8.itc.cn/images01/20260926/41c76d94d95e4d80aa622bfa37e6b61a.jpeg" alt="日本呼吁删除“敌国条款”，高市早苗发言">
-
-<h2>什么是“敌国条款”</h2>
-<p>所谓“敌国条款”，是指《联合国宪章》第53条、第77条和第107条构成的特殊制度安排。其核心内容是：若德国、意大利、日本等二战轴心国再次实施侵略政策的任何步骤，中国、法国、苏联、英国、美国等联合国创始成员国有权对其直接实施军事行动，<strong>无须安理会授权</strong>。</p>
-<p>这一条款是二战后国际社会为防止法西斯主义和军国主义死灰复燃而设置的“安全阀”，本质上是对战败国的制度性约束，也是对战后国际秩序的制度性保障。</p>
-
-<h2>日本推动删除的动机分析</h2>
-
-<h3>“和平国家”叙事与军事扩张的现实矛盾</h3>
-<p>高市早苗在联大演讲中宣称日本坚持“专守防卫”原则，是“和平国家”，并称日本在过去70年间为联合国事业作出了“巨大贡献”。然而，日方的实际行动与这一叙事形成了鲜明反差：</p>
-<ul>
-<li>2026年3月，日本首次部署了具备“对敌基地攻击能力”的远程导弹，射程约1000公里，标志着其防卫政策出现实质性转变；</li>
-<li>2026财年日本防卫预算高达<strong>9.04万亿日元</strong>，创历史新高；</li>
-<li>日本政府计划进一步将国防开支提升至GDP的3.5%左右；</li>
-<li>日本还计划设立与防卫密切相关的新法人机构，统筹防卫装备出口，被部分在野党称为“兵工厂”。</li>
-</ul>
-
-<img src="https://q4.itc.cn/images01/20260926/f6ee117e2c8d4ee58b25a033e9e450c9.jpeg" alt="日本积极扩军备武">
-
-<p>中国外交部发言人郭嘉昆对此的回应一针见血：“<strong>相比日方怎么说，国际社会更关注日本怎么做。</strong>”</p>
-
-<h3>为“入常”与军事松绑铺路</h3>
-<p>分析人士指出，日本推动删除“敌国条款”的深层目的，是试图摆脱战败国身份的历史包袱，为“国家正常化”和军事松绑提供合法性。军事专家张军社认为，高市早苗的联大发言是“一场精心策划的政治秀”，核心目的是为日本突破战后体制、发展进攻性作战力量提供舆论掩护，同时为谋求联合国安理会常任理事国席位创造条件。</p>
-
-<h2>修改门槛与国际反应</h2>
-
-<h3>法律程序上的高门槛</h3>
-<p>尽管日本方面援引1995年联大通过的一份建议性决议作为依据，但该决议<strong>不具备法律效力</strong>。根据《联合国宪章》的修改程序，删除“敌国条款”需要满足两个硬性条件：</p>
-<ol>
-<li>联合国<strong>三分之二成员国</strong>表决通过；</li>
-<li>包括中国在内的<strong>安理会五个常任理事国一致同意</strong>。</li>
-</ol>
-<p>这意味着，只要中俄等常任理事国中的任何一方反对，删除条款便无从实现。而中俄两国近期已多次重申“敌国条款”的约束力。</p>
-
-<h3>中方的明确立场</h3>
-
-<img src="https://q6.itc.cn/images01/20260926/64a1685b33714338825e015512860f35.jpeg" alt="外交部">
-
-<p>中国外交部发言人郭嘉昆在例行记者会上明确表示：“《联合国宪章》中的‘敌国条款’是重要制度安排，旨在防止法西斯主义、军国主义再度对国际和平与安全构成威胁，为捍卫战后国际秩序提供了重要制度保障，<strong>时至今日仍然具有重要现实意义</strong>。”</p>
-<p>中方还指出，日本当年是在承认军国主义罪行、接受《联合国宪章》全部内容的前提下加入联合国的，敦促日方“以史为鉴、深刻反省，以实际行动取信于亚洲邻国和国际社会”。</p>
-<p>俄罗斯外长拉夫罗夫此前也曾表态，希望日本“充分认真阅读《联合国宪章》”，并指出如果日本领导层试图突破本国宪法约束、逃避历史责任，“当然会引起严重担忧”。</p>
-
-<h2>结论：条款为何“删不得也不会删”</h2>
-<p>“敌国条款”至今未被删除，其根本原因不在于程序上的技术障碍，而在于日本自身的行为持续印证着这一条款存在的必要性。有评论指出，日本一边享受战后和平秩序的红利，一边不择手段挣脱规制；一边在联大标榜“和平国家”，一边加速强军扩武、图谋修改“和平宪法”、为“无核三原则”松绑。</p>
-<p>“敌国条款”不是一纸空文，而是战后国际秩序为防止日本军国主义复活设置的警报。日本越是积极推动删除这一条款，越是暴露其历史修正主义倾向和“新型军国主义”野心。正如分析所言，真正过时的不是《联合国宪章》的条款，而是日本军国主义的扩张旧梦。</p>
-
-<h2>延伸阅读</h2>
-<ul>
-<li><a href="https://www.un.org/zh/about-us/un-charter" target="_blank">《联合国宪章》全文</a></li>
-<li><a href="https://www.mfa.gov.cn/" target="_blank">中国外交部例行记者会实录</a></li>
-</ul>
 `
 }
 ];
