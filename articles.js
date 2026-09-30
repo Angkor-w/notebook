@@ -102,7 +102,7 @@ content:`
 <p style="margin:0 0 24px 64px;"><a href="https://www.microsoft.com/" target="_blank">www.microsoft.com</a></p>
 
 <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
-  <img src="https://mat1.gtimg.com/qqcdn/qqindex2021/favicon.ico" alt="腾讯网图标" style="width:48px;height:48px;border-radius:8px;">
+  <img src="https://ts1.tc.mm.bing.net/th/id/OIP-C.MPL812O4BGYHlAiTyhfGHQAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="腾讯网图标" style="width:48px;height:48px;border-radius:8px;">
   <div>
     <p style="margin:0 0 6px 0;font-size:16px;font-weight:600;">腾讯网</p>
     <p style="margin:0;font-size:14px;color:#666;">腾讯公司旗下的综合门户网站，集新闻信息、互动社区、娱乐产品于一体，为全球华人用户提供实时新闻和深度资讯服务。</p>
@@ -115,7 +115,7 @@ content:`
 {
 title:"操作技巧",
 date:"2026-09-30",
-desc:"常用网站链接",
+desc:"如何让操作更有含金量",
 content:`
 <h2>实用操作技巧</h2>
 <h3>1.浏览器批量添加书签</h3>
