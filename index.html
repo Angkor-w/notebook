@@ -48,6 +48,8 @@ footer{position:fixed;bottom:0;left:0;width:100%;border-top:2px solid #e5e7eb;pa
 .footer-icon:hover{opacity:1}
 .toast{position:fixed;left:50%;bottom:60px;transform:translateX(-50%);background:#222;color:#fff;padding:8px 16px;border-radius:6px;font-size:14px;z-index:200;opacity:0;pointer-events:none;transition:.2s}
 .toast.show{opacity:.9}
+.festival-btn{background-image: url('https://ts2.tc.mm.bing.net/th/id/OIP-C.82_2Kxjt_d4jwxySJPZSkAHaEr?r=0&rs=1&pid=ImgDetMain&o=7&rm=3');border:none;color:#fff;font-size:14px;font-weight:500;padding:0 16px;height:32px;line-height:32px;border-radius:20px;cursor:pointer;box-shadow:0 2px 8px rgba(239,68,68,.3);transition:.2s;display:flex;align-items:center;gap:4px;white-space:nowrap;margin-left:12px}
+.festival-btn.hide{display:none}
 </style>
 </head>
 <body>
@@ -57,7 +59,10 @@ footer{position:fixed;bottom:0;left:0;width:100%;border-top:2px solid #e5e7eb;pa
 <img class="avatar" src="images/logo.png" alt="avatar">
 <div class="site-title" id="siteTitle">BOX</div>
 </div>
+<div style="display:flex;align-items:center;">
+<button class="festival-btn" id="festivalBtn">国庆节</button>
 <div class="back" id="backBtn">×</div>
+</div>
 </div>
 </header>
 <main class="container">
@@ -85,81 +90,127 @@ footer{position:fixed;bottom:0;left:0;width:100%;border-top:2px solid #e5e7eb;pa
 <script src="./articles.js"></script>
 <script>
 const listView=document.getElementById('listView'),
-      detailView=document.getElementById('detailView'),
-      backBtn=document.getElementById('backBtn'),
-      detailTitle=document.getElementById('detailTitle'),
-      detailDate=document.getElementById('detailDate'),
-      detailContent=document.getElementById('detailContent'),
-      copyMailIcon=document.getElementById('copyMailIcon'),
-      toast=document.getElementById('toast'),
-      siteTitle=document.getElementById('siteTitle'),
-      MAIL="1220718305@qq.com";
+detailView=document.getElementById('detailView'),
+backBtn=document.getElementById('backBtn'),
+detailTitle=document.getElementById('detailTitle'),
+detailDate=document.getElementById('detailDate'),
+detailContent=document.getElementById('detailContent'),
+copyMailIcon=document.getElementById('copyMailIcon'),
+toast=document.getElementById('toast'),
+siteTitle=document.getElementById('siteTitle'),
+festivalBtn=document.getElementById('festivalBtn'),
+MAIL="1220718305@qq.com";
 let savedScrollY=0;
-
+const festivalData={
+title:'2026国庆节',
+date:'2026-10-1',
+content:`
+<h2>2026国庆节：山河锦绣，共贺华诞</h2>
+<p>2026年10月1日，中华人民共和国迎来<strong>第77个国庆节</strong>。从1949到2026，七十七载风雨兼程，这片土地上的每一座城市、每一条街道、每一张笑脸，都在用自己的方式讲述同一个故事——<strong>国泰民安，繁荣昌盛</strong>。</p>
+<img src="https://ts2.tc.mm.bing.net/th/id/OIP-C.juuCnxoLds80qTU_EbYOdAHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="国庆节城市广场上飘扬的红旗与人群" />
+<h3>一、国庆节的由来与意义</h3>
+<p>1949年10月1日，开国大典在天安门广场举行，五星红旗第一次冉冉升起。此后，每年10月1日被定为国庆日，成为全国各族人民共同庆祝的盛大节日。</p>
+<p>国庆不仅是一个假期，更是一次<em>集体记忆的重温</em>。它提醒我们：今天的安稳生活，来自无数先辈的奋斗与牺牲。</p>
+<blockquote>
+  <p>“为有牺牲多壮志，敢教日月换新天。”——这盛世，如你所愿。</p>
+</blockquote>
+<h3>二、2026年国庆亮点展望</h3>
+<p>随着时代发展，国庆的庆祝方式也在不断丰富。2026年的国庆，预计将有这些值得期待的看点：</p>
+<ul>
+  <li><strong>天安门升旗仪式</strong>：清晨的国旗护卫队步伐铿锵，万众瞩目。</li>
+  <li><strong>城市灯光秀</strong>：多地地标建筑将上演主题光影表演。</li>
+  <li><strong>红色旅游热潮</strong>：革命纪念馆、历史遗址迎来参观高峰。</li>
+  <li><strong>文旅消费季</strong>：景区、商圈推出节日特色活动与优惠。</li>
+</ul>
+<h3>三、假期出行小贴士</h3>
+<p>国庆长假是出行高峰，提前规划能让旅途更从容。建议参考以下顺序安排：</p>
+<ol>
+  <li>提前预订交通与住宿，避开<strong>10月1日上午</strong>的出行峰值。</li>
+  <li>关注目的地天气与景区预约政策，部分场馆需提前<code>实名预约</code>。</li>
+  <li>错峰游览，选择<em>小众路线</em>往往体验更佳。</li>
+  <li>注意人身与财产安全，文明出行，礼让他人。</li>
+</ol>
+<p>如果选择宅家，也可以观看国庆档电影、阅读历史书籍，或与家人一起做一顿丰盛的团圆饭。节日的意义，从来不只在于走多远，而在于<strong>与谁同行</strong>。</p>
+<h3>四、祝福祖国</h3>
+<p>七十七年，是一个国家从站起来、富起来到强起来的壮阔历程。站在2026年的节点回望，我们更能体会“<em>家是最小国，国是千万家</em>”的深意。</p>
+<p>愿山河无恙，愿人间皆安。祝祖国生日快乐，也祝每一个努力生活的你，<strong>节日快乐</strong>！</p>
+<p>更多国庆资讯与官方活动安排，可关注 <a href="https://www.gov.cn" target="_blank">中国政府网</a> 及相关官方发布平台。</p>
+`
+};
 copyMailIcon.addEventListener('click',async()=>{
-  try{
-    await navigator.clipboard.writeText(MAIL);
-    showToast("已复制邮箱");
-  }catch(e){
-    const input=document.createElement('input');
-    input.value=MAIL;
-    document.body.appendChild(input);
-    input.select();
-    document.execCommand('copy');
-    document.body.removeChild(input);
-    showToast("已复制邮箱");
-  }
+try{
+await navigator.clipboard.writeText(MAIL);
+showToast("已复制邮箱");
+}catch(e){
+const input=document.createElement('input');
+input.value=MAIL;
+document.body.appendChild(input);
+input.select();
+document.execCommand('copy');
+document.body.removeChild(input);
+showToast("已复制邮箱");
+}
 });
-
 function showToast(text){
-  toast.innerText=text;
-  toast.classList.add('show');
-  setTimeout(()=>toast.classList.remove('show'),1800);
+toast.innerText=text;
+toast.classList.add('show');
+setTimeout(()=>toast.classList.remove('show'),1800);
 }
-
 function renderList(){
-  listView.innerHTML='';
-  articles.forEach((item,idx)=>{
-    const card=document.createElement('div');
-    card.className='news-card';
-    card.onclick=()=>openDetail(idx);
-    let badgeHtml='';
-    if(idx===0) badgeHtml=`<div class="badge badge-1">1</div>`;
-    else if(idx===1) badgeHtml=`<div class="badge badge-2">2</div>`;
-    else if(idx===2) badgeHtml=`<div class="badge badge-3">3</div>`;
-    else badgeHtml=`<div class="badge badge-normal">${idx+1}</div>`;
-    card.innerHTML=`
-      ${badgeHtml}
-      <div class="news-date">${item.date}</div>
-      <h3>${item.title}</h3>
-      <div class="news-summary">${item.desc}</div>
-    `;
-    listView.appendChild(card);
-  });
+listView.innerHTML='';
+articles.forEach((item,idx)=>{
+const card=document.createElement('div');
+card.className='news-card';
+card.onclick=()=>openDetail(idx);
+let badgeHtml='';
+if(idx===0) badgeHtml=`<div class="badge badge-1">1</div>`;
+else if(idx===1) badgeHtml=`<div class="badge badge-2">2</div>`;
+else if(idx===2) badgeHtml=`<div class="badge badge-3">3</div>`;
+else badgeHtml=`<div class="badge badge-normal">${idx+1}</div>`;
+card.innerHTML=`
+${badgeHtml}
+<div class="news-date">${item.date}</div>
+<h3>${item.title}</h3>
+<div class="news-summary">${item.desc}</div>
+`;
+listView.appendChild(card);
+});
 }
-
 function openDetail(i){
-  savedScrollY=window.scrollY;
-  const item=articles[i];
-  detailTitle.innerText=item.title;
-  detailDate.innerText=item.date;
-  detailContent.innerHTML=item.content;
-  listView.style.display='none';
-  detailView.style.display='block';
-  backBtn.style.display='block';
-  siteTitle.classList.add('hide');
-  window.scrollTo(0,0);
+savedScrollY=window.scrollY;
+const item=articles[i];
+detailTitle.innerText=item.title;
+detailDate.innerText=item.date;
+detailContent.innerHTML=item.content;
+listView.style.display='none';
+detailView.style.display='block';
+backBtn.style.display='block';
+siteTitle.classList.add('hide');
+festivalBtn.classList.add('hide');
+window.scrollTo(0,0);
 }
-
+function openFestivalDetail(){
+savedScrollY=window.scrollY;
+detailTitle.innerText=festivalData.title;
+detailDate.innerText=festivalData.date;
+detailContent.innerHTML=festivalData.content;
+listView.style.display='none';
+detailView.style.display='block';
+backBtn.style.display='block';
+siteTitle.classList.add('hide');
+festivalBtn.classList.add('hide');
+window.scrollTo(0,0);
+}
 function backToList(){
-  listView.style.display='grid';
-  detailView.style.display='none';
-  backBtn.style.display='none';
-  siteTitle.classList.remove('hide');
-  window.scrollTo(0,savedScrollY);
+listView.style.display='grid';
+detailView.style.display='none';
+backBtn.style.display='none';
+siteTitle.classList.remove('hide');
+festivalBtn.classList.remove('hide');
+window.scrollTo(0,savedScrollY);
 }
-
 backBtn.addEventListener('click',backToList);
+festivalBtn.addEventListener('click',openFestivalDetail);
 renderList();
 </script>
 </body>
